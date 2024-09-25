@@ -40,3 +40,5 @@ samples, guidance on mobile development, and a full API reference.
 **build**: armazena arquivos gerados como arquivo APK, arquivo IPA (no caso de IOS)...
 
 oi
+
+tudo bem?
