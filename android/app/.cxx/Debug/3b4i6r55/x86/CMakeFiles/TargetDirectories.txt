@@ -1,0 +1,2 @@
+C:/Users/luann/OneDrive/Documentos/Curso_Flutter/Flutter-Carmen/appprofissoes-master/android/app/.cxx/Debug/3b4i6r55/x86/CMakeFiles/edit_cache.dir
+C:/Users/luann/OneDrive/Documentos/Curso_Flutter/Flutter-Carmen/appprofissoes-master/android/app/.cxx/Debug/3b4i6r55/x86/CMakeFiles/rebuild_cache.dir
