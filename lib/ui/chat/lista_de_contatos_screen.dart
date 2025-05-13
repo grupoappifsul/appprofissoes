@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'chat_profissional_page.dart';
+import '../chat/chat_screen.dart';
+import '../core/widgets/app_colors.dart';
 
 class ListaProfissionaisPage extends StatelessWidget {
   const ListaProfissionaisPage({super.key});
@@ -7,7 +8,7 @@ class ListaProfissionaisPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF204E85),
+      backgroundColor: AppColors.backgroundColor,
       body: SafeArea(
         child: Column(
           children: [
@@ -38,7 +39,7 @@ class ListaProfissionaisPage extends StatelessWidget {
                 decoration: InputDecoration(
                   hintText: 'Buscar...',
                   filled: true,
-                  fillColor: Colors.white,
+                  fillColor: AppColors.lightBackgroundColor,
                   prefixIcon: const Icon(Icons.search),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(30),
@@ -61,8 +62,8 @@ class ListaProfissionaisPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black,
-        selectedItemColor: Colors.white,
+        backgroundColor: Colors.black, // Pode criar AppColors.darkBackground se quiser
+        selectedItemColor: AppColors.lightBackgroundColor,
         unselectedItemColor: Colors.grey,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.person), label: ''),
@@ -86,7 +87,6 @@ class ProfissionalItem extends StatelessWidget {
     required this.profissao,
   });
 
-  // Função para navegar até a tela de chat
   void _navigateToChat(BuildContext context) {
     Navigator.push(
       context,
@@ -105,8 +105,7 @@ class ProfissionalItem extends StatelessWidget {
         trailing: IconButton(
           icon: const Icon(Icons.chat),
           onPressed: () {
-            // Navegar para a tela de chat
-            _navigateToChat(context);  // Chama a navegação para o chat
+            _navigateToChat(context);
           },
         ),
       ),

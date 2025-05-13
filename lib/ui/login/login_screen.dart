@@ -1,7 +1,7 @@
 // login_page.dart
 import 'package:flutter/material.dart';
-import 'cadastro_page.dart';
-import 'home_page.dart'; // Importa a tela de cadastro se for navegar para ela
+import '../cadastro/cadastro_screen.dart';
+import '../home/home_screen.dart'; // Importa a tela de cadastro se for navegar para ela
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});

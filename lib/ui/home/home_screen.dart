@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'profile_screen.dart';
-import 'lista_profissionais_page.dart';
-import 'suporte_page.dart'; // Certifique-se de que esse é o arquivo onde está ChatSuportePage
+import '../perfil/perfil_profissional_screen.dart';
+import '../chat/lista_de_contatos_screen.dart';
+import '../suporte/suporte_screen.dart';
+import '../core/widgets/app_colors.dart'; // exemplo de caminho
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -54,15 +55,15 @@ class HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        backgroundColor: Colors.white,
+          backgroundColor: AppColors.lightBackgroundColor,
         elevation: 0,
         title: Row(
           children: [
-            const Icon(Icons.build, color: Colors.blue),
+            Icon(Icons.build, color: AppColors.mainColor),
             const SizedBox(width: 8),
-            const Text('NEED', style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold)),
+            const Text('NEED', style: TextStyle(color: AppColors.mainColor, fontWeight: FontWeight.bold)),
             const Spacer(),
-            IconButton(icon: const Icon(Icons.search, color: Colors.blue), onPressed: () {}),
+            IconButton(icon: const Icon(Icons.search, color: AppColors.mainColor), onPressed: () {}),
           ],
         ),
       ),
@@ -71,7 +72,7 @@ class HomePageState extends State<HomePage> {
           Container(
             padding: const EdgeInsets.all(16),
             width: double.infinity,
-            color: Colors.blue,
+            color: AppColors.mainColor,
             child: const Row(
               children: [
                 Text('SELEÇÃO DE HOJE', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
